@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christy Chacko | AI Engineer & Data Scientist</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              dark: '#07080e',
+              panel: '#0e111a',
+              card: '#131826',
+              cyan: '#00f2fe',
+              blue: '#4facfe',
+              violet: '#7f56d9',
+              border: '#1f283e'
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #07080e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1f283e;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00f2fe;
+    }
+
+    /* Subtle Futuristic Background Grid */
+    .cyber-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    }
+    
+    .glass-card {
+      background: rgba(14, 17, 26, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    
+    .glass-card:hover {
+      border-color: rgba(0, 242, 254, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-brand-dark text-slate-200 antialiased font-sans selection:bg-brand-cyan/20 selection:text-brand-cyan">
+
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/5 bg-brand-dark/70 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-cyan to-brand-violet p-[1px]">
+          <div class="w-full h-full bg-brand-dark rounded-xl flex items-center justify-center font-mono font-bold text-lg text-brand-cyan group-hover:scale-95 transition">
+            CC
+          </div>
+        </div>
+        <div>
+          <span class="font-bold tracking-tight text-white block">Christy Chacko</span>
+          <span class="text-xs text-brand-cyan/80 font-mono tracking-wider uppercase block">AI & Agentic Systems</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+        <a href="#about" class="hover:text-brand-cyan transition-colors">Profile</a>
+        <a href="#experience" class="hover:text-brand-cyan transition-colors">Experience</a>
+        <a href="#projects" class="hover:text-brand-cyan transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-brand-cyan transition-colors">Tech Stack</a>
+        <a href="#education" class="hover:text-brand-cyan transition-colors">Education</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <a href="mailto:tcchacko2016@gmail.com" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-brand-cyan/50 text-xs font-mono font-semibold text-white tracking-wide transition-all shadow-sm">
+          <i data-lucide="terminal" class="w-3.5 h-3.5 text-brand-cyan"></i>
+          <span>GET IN TOUCH</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="hero" class="relative w-full h-screen min-h-[700px] overflow-hidden flex items-center">
+    
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline 
+      class="absolute inset-0 w-full h-full object-cover object-center z-0"
+    >
+      <source src="hero-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-dark/70 to-transparent z-10 w-full pointer-events-none md:w-[75%] lg:w-[60%]"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/40 z-10 pointer-events-none"></div>
+
+    <div class="relative z-20 max-w-7xl mx-auto px-6 sm:px-12 w-full pt-16">
+      <div class="max-w-xl">
+        
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-brand-card/90 border border-brand-border backdrop-blur-md mb-6 animate-float shadow-lg">
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-cyan opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-cyan"></span>
+          </span>
+          <span class="text-xs font-mono text-slate-300">Munich, Germany · Open to AI Roles</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.1] mb-4">
+          Hi, I'm <br/>
+          <span class="bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-violet bg-clip-text text-transparent">
+            Christy Chacko
+          </span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 font-normal leading-relaxed mb-8">
+          AI Engineer & Master’s Student in Artificial Intelligence & Data Science at <span class="text-white font-medium"> TH Deggendorf</span>. Specializing in <span class="text-brand-cyan"> Agentic AI Workflows</span>, <span class="text-brand-cyan"> RAG Systems </span>, and production-grade software integration.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#projects" class="px-6 py-3 rounded-xl bg-gradient-to-r from-brand-cyan to-brand-blue text-brand-dark font-bold text-sm tracking-wide flex items-center gap-2 hover:opacity-95 transition shadow-[0_0_25px_rgba(0,242,254,0.3)]">
+            <span>Explore Projects</span>
+            <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+          </a>
+          
+          <a href="https://linkedin.com/in/christy-chacko" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-brand-panel/80 hover:bg-brand-card border border-white/10 text-white font-medium text-sm flex items-center gap-2 backdrop-blur-md transition">
+            <i data-lucide="linkedin" class="w-4 h-4 text-brand-blue"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+
+        <div class="mt-12 flex items-center gap-6 border-t border-white/10 pt-6 font-mono text-xs text-slate-400">
+          <div>
+            <span class="block text-slate-500">EXPERIENCE</span>
+            <span class="text-white font-semibold text-sm">2+ Years</span>
+          </div>
+          <div class="w-px h-8 bg-white/10"></div>
+          <div>
+            <span class="block text-slate-500">FOCUS</span>
+            <span class="text-white font-semibold text-sm">LangGraph · RAG · MCP</span>
+          </div>
+          <div class="w-px h-8 bg-white/10"></div>
+          <div>
+            <span class="block text-slate-500">LOCATION</span>
+            <span class="text-white font-semibold text-sm">Munich / Deggendorf</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition">
+      <span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase">Scroll</span>
+      <i data-lucide="chevron-down" class="w-4 h-4 text-brand-cyan animate-bounce"></i>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 relative cyber-grid">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="glass-card rounded-2xl p-8 sm:p-12 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-cyan/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          <div class="lg:col-span-1 border-b lg:border-b-0 lg:border-r border-white/10 pb-6 lg:pb-0 lg:pr-8">
+            <span class="text-brand-cyan font-mono text-xs uppercase tracking-widest block mb-2">// 01. About Me</span>
+            <h2 class="text-3xl font-extrabold text-white tracking-tight">Engineering Reliable AI Products</h2>
+          </div>
+          <div class="lg:col-span-2 text-slate-300 leading-relaxed text-sm sm:text-base space-y-4">
+            <p>
+              I am an aspiring AI Engineer with over 2 years of experience in applied machine learning and full-stack software development. Currently pursuing an MSc in Artificial Intelligence & Data Science in Germany, my focus centers on building reliable, testable agentic ecosystems and production-grade LLM applications.
+            </p>
+            <p>
+              From designing predictive autoencoders and multi-modal computer vision tools at <span class="text-white font-medium">Safran</span> to authoring <span class="text-white font-medium">MCP (Model Context Protocol) servers</span> and streaming support workflows using FastAPI and LangGraph, I bridge the gap between cutting-edge AI research and robust production backends.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div>
+          <span class="text-brand-cyan font-mono text-xs uppercase tracking-widest block mb-2">// 02. Selected Work</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Featured Projects & AI Systems</h2>
+        </div>
+        <p class="text-slate-400 text-sm max-w-md mt-4 md:mt-0 font-mono">
+          Agentic architectures, tool-calling servers, model routers, and RAG pipelines.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-brand-cyan/10 text-brand-cyan border border-brand-cyan/20">Agentic RAG</span>
+              <i data-lucide="cpu" class="w-5 h-5 text-slate-500 group-hover:text-brand-cyan transition"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-cyan transition">Production AI Support Agent</h3>
+            <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+              Engineered an agentic support workflow leveraging tool calling, conversational memory, streaming token responses, and dynamic fallback handlers.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-2 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-cyan"></i> Built dynamic FastAPI guardrails and fallback mechanisms</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-cyan"></i> Automated test suite for latency, reliability, & retrieval accuracy</li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 font-mono text-[11px] text-slate-400">
+            <span class="bg-white/5 px-2.5 py-1 rounded">Python</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">LangGraph</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">FastAPI</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">PostgreSQL</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">RAG</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-brand-violet/10 text-brand-violet border border-brand-violet/20">Protocol / Tools</span>
+              <i data-lucide="server" class="w-5 h-5 text-slate-500 group-hover:text-brand-violet transition"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-violet transition">Developer MCP Server</h3>
+            <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+              Standardized Model Context Protocol (MCP) server that empowers LLM agents to autonomously query code repositories, parse documentation, and analyze runtime logs.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-2 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-violet"></i> Clean tool interfaces for GitHub API & documentation indexing</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-violet"></i> Zero-overhead integration into modern Agent runtimes</li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 font-mono text-[11px] text-slate-400">
+            <span class="bg-white/5 px-2.5 py-1 rounded">Python</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">MCP Standard</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">FastAPI</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">GitHub API</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-brand-blue/10 text-brand-blue border border-brand-blue/20">Model Routing</span>
+              <i data-lucide="network" class="w-5 h-5 text-slate-500 group-hover:text-brand-blue transition"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brand-blue transition">Dynamic LLM Model Router</h3>
+            <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+              Intelligent query routing framework that evaluates query complexity, semantic intent, and cost constraints to dispatch prompts to appropriate local or frontier LLMs.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-2 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-blue"></i> Locally orchestrated with Ollama and LangChain</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-blue"></i> Streamlit monitoring dashboard for evaluation</li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 font-mono text-[11px] text-slate-400">
+            <span class="bg-white/5 px-2.5 py-1 rounded">Python</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">LangChain</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">Ollama</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group hover:-translate-y-1 transition duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-emerald-400/10 text-emerald-400 border border-emerald-400/20">Operations</span>
+              <i data-lucide="bot" class="w-5 h-5 text-slate-500 group-hover:text-emerald-400 transition"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition">AI Workflow & Operations Assistant</h3>
+            <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+              Automated document parsing, extraction, and structured reporting workflows that eliminate manual operational overhead using modular LLM pipelines.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-2 mb-6 font-mono">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Transforms unstructured text into schema-validated payloads</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Seamless third-party API and database integration</li>
+            </ul>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 font-mono text-[11px] text-slate-400">
+            <span class="bg-white/5 px-2.5 py-1 rounded">Python</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">LangChain</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">APIs</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded">Structured Output</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="experience" class="py-20 bg-brand-panel/40 cyber-grid">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="mb-16">
+        <span class="text-brand-cyan font-mono text-xs uppercase tracking-widest block mb-2">// 03. Track Record</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Work Experience</h2>
+      </div>
+
+      <div class="space-y-8 relative before:absolute before:inset-0 before:left-3 md:before:left-1/2 before:w-0.5 before:-translate-x-1/2 before:bg-white/10">
+
+        <div class="relative flex flex-col md:flex-row items-start group">
+          <div class="flex items-center md:w-1/2 md:justify-end md:pr-10 mb-2 md:mb-0">
+            <div class="text-left md:text-right">
+              <span class="font-mono text-xs text-brand-cyan font-semibold block">02/2024 -- 03/2025</span>
+              <span class="text-slate-400 text-xs font-mono">Bengaluru, India</span>
+            </div>
+          </div>
+          <div class="absolute left-3 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-brand-dark border-2 border-brand-cyan z-10 group-hover:scale-125 transition"></div>
+          <div class="pl-8 md:pl-10 md:w-1/2">
+            <div class="glass-card p-6 rounded-2xl">
+              <h3 class="text-lg font-bold text-white">Research Engineer</h3>
+              <div class="text-brand-blue text-sm font-medium mb-3">Safran Engineering Services</div>
+              <ul class="text-sm text-slate-300 space-y-2 list-disc list-outside pl-4">
+                <li>Engineered an autoencoder-based anomaly detection pipeline for predictive health monitoring on high-frequency sensor telemetry.</li>
+                <li>Built end-to-end deep learning pipelines encompassing data cleansing, training loops, and rigorous validation metrics.</li>
+                <li>Architected full-stack enterprise web applications using React, Node.js, Express.js, and MongoDB.</li>
+                <li>Built a high-performance Raspberry Pi-to-mobile WiFi Direct file transfer pipeline with chunked S3 uploads for 1GB+ telemetry datasets.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-start group">
+          <div class="flex items-center md:w-1/2 md:justify-end md:pr-10 mb-2 md:mb-0">
+            <div class="text-left md:text-right">
+              <span class="font-mono text-xs text-brand-blue font-semibold block">08/2023 -- 02/2024</span>
+              <span class="text-slate-400 text-xs font-mono">Bengaluru, India</span>
+            </div>
+          </div>
+          <div class="absolute left-3 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-brand-dark border-2 border-brand-blue z-10 group-hover:scale-125 transition"></div>
+          <div class="pl-8 md:pl-10 md:w-1/2">
+            <div class="glass-card p-6 rounded-2xl">
+              <h3 class="text-lg font-bold text-white">Trainee Engineer</h3>
+              <div class="text-brand-blue text-sm font-medium mb-3">Safran Engineering Services</div>
+              <ul class="text-sm text-slate-300 space-y-2 list-disc list-outside pl-4">
+                <li>Built computer vision object detection tools for automated galley tracking, achieving <strong class="text-white">85% mAP</strong>.</li>
+                <li>Automated inventory audit reporting and real-time Slack incident notifications.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row items-start group">
+          <div class="flex items-center md:w-1/2 md:justify-end md:pr-10 mb-2 md:mb-0">
+            <div class="text-left md:text-right">
+              <span class="font-mono text-xs text-brand-violet font-semibold block">06/2022 -- 11/2022</span>
+              <span class="text-slate-400 text-xs font-mono">Kottayam, India</span>
+            </div>
+          </div>
+          <div class="absolute left-3 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-brand-dark border-2 border-brand-violet z-10 group-hover:scale-125 transition"></div>
+          <div class="pl-8 md:pl-10 md:w-1/2">
+            <div class="glass-card p-6 rounded-2xl">
+              <h3 class="text-lg font-bold text-white">Back-End Developer Intern</h3>
+              <div class="text-brand-violet text-sm font-medium mb-3">Leopard Tech Lab</div>
+              <ul class="text-sm text-slate-300 space-y-2 list-disc list-outside pl-4">
+                <li>Designed scalable REST API backends with Node.js, Express.js, and MongoDB.</li>
+                <li>Implemented secure user authentication schemas and streamlined third-party integrations.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="mb-14">
+        <span class="text-brand-cyan font-mono text-xs uppercase tracking-widest block mb-2">// 04. Capabilities</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Technical Arsenal</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="p-2.5 rounded-lg bg-brand-cyan/10 text-brand-cyan"><i data-lucide="bot" class="w-5 h-5"></i></div>
+            <h3 class="font-bold text-white text-base">Agentic AI & LLMs</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">LangGraph</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">LangChain</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">MCP Protocol</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">RAG & Vector Search</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">Structured Outputs</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">Tool Calling</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">LLM Evaluation</span>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="p-2.5 rounded-lg bg-brand-blue/10 text-brand-blue"><i data-lucide="code-2" class="w-5 h-5"></i></div>
+            <h3 class="font-bold text-white text-base">Languages & Backend</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">Python</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">FastAPI</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">TypeScript</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">JavaScript</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">Node.js / Express</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">PostgreSQL</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">React</span>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="p-2.5 rounded-lg bg-brand-violet/10 text-brand-violet"><i data-lucide="layers" class="w-5 h-5"></i></div>
+            <h3 class="font-bold text-white text-base">Data & Cloud</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">Pandas & NumPy</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">Docker</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">AWS (S3)</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">Git & CI/CD</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">Data Pipelines</span>
+            <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white/5 border border-white/5 text-slate-300">Agile / Jira</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="education" class="py-20 bg-brand-panel/30">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <div>
+          <span class="text-brand-cyan font-mono text-xs uppercase tracking-widest block mb-2">// 05. Academic Background</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-8">Education</h2>
+
+          <div class="space-y-6">
+            <div class="glass-card p-6 rounded-2xl">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-bold text-white text-base">M.Sc. in Artificial Intelligence & Data Science</h3>
+                <span class="font-mono text-xs text-brand-cyan">03/2025 -- Present</span>
+              </div>
+              <p class="text-brand-blue text-sm mb-2 font-medium">Technische Hochschule Deggendorf · Germany</p>
+              <p class="text-xs text-slate-400">Focus Areas: Data Science, Machine Learning, Generative AI Systems</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="font-bold text-white text-base">B.Tech. in Computer Science & Engineering</h3>
+                <span class="font-mono text-xs text-slate-400">08/2019 -- 07/2023</span>
+              </div>
+              <p class="text-brand-blue text-sm mb-2 font-medium">Amal Jyothi College of Engineering · India</p>
+              <p class="text-xs text-slate-400 mb-2">CGPA: 8.8/10 (Equivalent to 1.8 on the German Grading Scale)</p>
+              <p class="text-xs text-slate-400 font-mono">Final Project: Smart Attentiveness Monitoring on Raspberry Pi & Flutter Dashboard</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="text-brand-violet font-mono text-xs uppercase tracking-widest block mb-2">// 06. Verified Credentials</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-8">Certifications & Languages</h2>
+
+          <div class="glass-card p-6 rounded-2xl space-y-4 mb-6">
+            <h3 class="text-white font-bold text-sm tracking-wide uppercase font-mono">Certifications</h3>
+            <ul class="text-sm text-slate-300 space-y-2.5">
+              <li class="flex items-center gap-2.5"><i data-lucide="badge-check" class="w-4 h-4 text-brand-cyan"></i> Building Agentic AI Systems</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="badge-check" class="w-4 h-4 text-brand-cyan"></i> Vector Databases for Caching & RAG (LLM Foundations)</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="badge-check" class="w-4 h-4 text-brand-cyan"></i> Introduction to Prompt Engineering</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="badge-check" class="w-4 h-4 text-brand-cyan"></i> Oracle Cloud Infrastructure Foundations</li>
+              <li class="flex items-center gap-2.5"><i data-lucide="badge-check" class="w-4 h-4 text-brand-cyan"></i> Python Training (IIT Bombay)</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl flex items-center justify-between">
+            <div>
+              <span class="text-xs text-slate-400 font-mono block uppercase">Communication</span>
+              <span class="font-bold text-white text-base">Languages</span>
+            </div>
+            <div class="flex gap-4 font-mono text-sm">
+              <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-slate-200">English (Fluent)</span>
+              <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-slate-200">German</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="py-12 border-t border-white/5 bg-brand-dark">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-cyan"></span>
+        <span class="font-mono text-sm text-slate-400">Christy Chacko · Portfolio</span>
+      </div>
+
+      <div class="flex items-center gap-6 text-sm text-slate-400 font-mono">
+        <a href="mailto:tcchacko2016@gmail.com" class="hover:text-brand-cyan transition flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-4 h-4"></i> tcchacko2016@gmail.com
+        </a>
+        <a href="tel:+4915510744818" class="hover:text-brand-cyan transition flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-4 h-4"></i> +49 15510744818
+        </a>
+        <a href="https://linkedin.com/in/christy-chacko" target="_blank" rel="noopener noreferrer" class="hover:text-brand-cyan transition flex items-center gap-1.5">
+          <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+        </a>
+      </div>
+
+      <div class="text-xs text-slate-500 font-mono">
+        © 2026 Christy Chacko. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
